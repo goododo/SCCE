@@ -1,9 +1,9 @@
 rm(list = ls());gc()
 
-if(!dir.exists('C:/Users/10784/Desktop/SCCE/8.1.Myeloid_DEG')){
-  dir.create('C:/Users/10784/Desktop/SCCE/8.1.Myeloid_DEG',recursive = T)}
+if(!dir.exists('SCCE/8.1.Myeloid_DEG')){
+  dir.create('SCCE/8.1.Myeloid_DEG',recursive = T)}
 
-setwd('C:/Users/10784/Desktop/SCCE/8.1.Myeloid_DEG')
+setwd('SCCE/8.1.Myeloid_DEG')
 # library packages ====
 library(dplyr)
 library(Seurat)
@@ -128,7 +128,6 @@ humanMarkers <- list(
   Mono = c('CD14', 'CD16', 'CD64', 'CCR2'),
   Macro = c('CD68', 'CD163', 'CD206', 'CD11B'),
   DC = c('CD11C', 'CD123', 'CD83', 'CD86', 'CD40', 'HLADR'),
-  #Neutro = c('CD66B', 'CEACAM8', 'CD15'),
   Eosino = c('CD125', 'CD9', 'SIGLEC8')
 )
 
@@ -220,10 +219,10 @@ volcanoFUN_multi(dataset=DFgenes,
                  w=8,h=6.5)
 
 # DEG ====
-if(!dir.exists('C:\\Users\\10784\\Desktop\\SCCE\\8.2.Myeloid_func')){
-  dir.create('C:\\Users\\10784\\Desktop\\SCCE\\8.2.Myeloid_func',recursive = T)}
+if(!dir.exists('SCCE\\8.2.Myeloid_func')){
+  dir.create('SCCE\\8.2.Myeloid_func',recursive = T)}
 
-setwd('C:\\Users\\10784\\Desktop\\SCCE\\8.2.Myeloid_func')
+setwd('SCCE\\8.2.Myeloid_func')
 # library packages ====
 library(dplyr)
 library(Seurat)
