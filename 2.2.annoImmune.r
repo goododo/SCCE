@@ -1,9 +1,9 @@
 rm(list = ls());gc()
 
-if(!dir.exists('/home/gzy//SCCE/2.2.annoImmune')){
-  dir.create('/home/gzy//SCCE/2.2.annoImmune',recursive = T)}
+if(!dir.exists('SCCE/2.2.annoImmune')){
+  dir.create('SCCE/2.2.annoImmune',recursive = T)}
 
-setwd('/home/gzy//SCCE/2.2.annoImmune')
+setwd('SCCE/2.2.annoImmune')
 # library packages ====
 library(dplyr)
 library(Seurat)
@@ -196,7 +196,7 @@ immune <- AddMetaData(immune,ImmuneType,col.name = 'ImmuneType')
 table(immune$ImmuneType)
 table(immune$ImmuneType,immune$orig.ident)
 
-## delete not good markers (common) ====
+## delete no exp markers (common) ====
 humanMarkers <- list(
   #Lymphoid
     TCells = c('CD3D','CD3E','CD3G','CD2','GNLY'),
