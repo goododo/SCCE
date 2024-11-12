@@ -1,9 +1,9 @@
 rm(list = ls());gc()
 
-if(!dir.exists('/home/gzy/SCCE/5.pseudo')){
-  dir.create('/home/gzy/SCCE/5.pseudo',recursive = T)}
+if(!dir.exists('SCCE/5.pseudo')){
+  dir.create('SCCE/5.pseudo',recursive = T)}
 
-setwd('/home/gzy/SCCE/5.pseudo')
+setwd('SCCE/5.pseudo')
 # library packages ====
 library(dplyr)
 library(Seurat)
