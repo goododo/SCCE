@@ -1,7 +1,7 @@
 #esophageal small-cell carcinoma
 rm(list = ls());gc()
 
-setwd('/Users/icu/Desktop/SCCE/0.rawdata')
+setwd('SCCE/0.rawdata')
 # library ====
 library(dplyr)
 library(Seurat)
@@ -46,7 +46,7 @@ plot1 + plot2
 dev.off()
 
 ## filter
-#retain 200< Feature_RNA <10000 的细胞，过滤>20%的线粒体
+#retain 200< Feature_RNA <10000 cell，filter >20% Mitochondria
 SCCE_1N.qc <- subset(SCCE_1N, subset = nFeature_RNA > 200 & nFeature_RNA < 10000 &
                        percent.mt < 20)
 
@@ -112,7 +112,7 @@ plot1 + plot2
 dev.off()
 
 ## filter
-#retain 200< Feature_RNA <15000 的细胞，过滤>20%的线粒体
+#retain 200< Feature_RNA <15000 cell，filter >20% Mitochondria
 SCCE_1T.qc <- subset(SCCE_1T, subset = nFeature_RNA > 200 & nFeature_RNA < 10000 &
                        percent.mt < 20)
 
