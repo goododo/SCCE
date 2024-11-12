@@ -1,9 +1,9 @@
 rm(list = ls());gc()
 
-if(!dir.exists('C:/Users/10784/Desktop/SCCE/7.1.tumor_T_cellChat')){
-  dir.create('C:/Users/10784/Desktop/SCCE/7.1.tumor_T_cellChat',recursive = T)}
+if(!dir.exists('SCCE/7.1.tumor_T_cellChat')){
+  dir.create('SCCE/7.1.tumor_T_cellChat',recursive = T)}
 
-setwd('C:/Users/10784/Desktop/SCCE/7.1.tumor_T_cellChat')
+setwd('SCCE/7.1.tumor_T_cellChat')
 # library packages ====
 library(dplyr)
 library(Seurat)
@@ -776,81 +776,3 @@ netVisual_bubble(object.list[[2]],
                  grid.on = F,
                  angle.x = 45, remove.isolate = T, return.data = F)
 dev.off()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-intersect(object.list[[1]]@netP$pathways,object.list[[2]]@netP$pathways)
-
-union(object.list[[1]]@netP$pathways,object.list[[2]]@netP$pathways)
-
-## specific in BoM (chord)
-interestPW <- c('MHC-I','PTN','MK')
-lapply(interestPW, function(pw){
-  pdf(paste0('from Naive Middle ',pw,'.pdf'),width = 4,height = 4,onefile = F)
-  print(
-    netVisual_chord_gene(object.list[[1]], slot.name = 'net',
-                         net = net.up,
-                         signaling = pw,
-                         sources.use = 'Middle',
-                         #targets.use = 'Carcinoma',
-                         #remove.isolate = T,
-                         show.legend = F,
-                         lab.cex = 0.5,
-                         #small.gap=0, big.gap=10,
-                         color.use = c('Initiator'='#ff7e67','Middle'='#fdffab',
-                                       'Terminus'='#ffd3b6','IniTerm'='#ffaaa5',
-                                       'Universal'='#11999e','Tcyto'='#e0f9b5',
-                                       'PCTL'='#ffc7c7','Th'='#a6d0e4',
-                                       'ExhrTH'='#c06c84','Teff'='#9896f1'),
-                         title.name = paste0(names(object.list)[3],' - ',pw),
-                         legend.pos.x = 5)
-  )
-  dev.off()
-})
-
-interestPW <- c('SPP1','FN1','GALECTIN','GRN','CEACAM')
-lapply(interestPW, function(pw){
-  pdf(paste0('targetCarcinoma_',pw,'.pdf'),width = 4,height = 4,onefile = F)
-  print(
-    netVisual_chord_gene(object.list[[3]], slot.name = 'net',
-                         net = net.up,
-                         signaling = pw,
-                         #sources.use = 'Carcinoma',
-                         targets.use = 'Carcinoma',
-                         #remove.isolate = T,
-                         show.legend = F,
-                         lab.cex = 0.5,
-                         #small.gap=0, big.gap=10,
-                         color.use = c('Initiator'='#ff7e67','Middle'='#fdffab',
-                                       'Terminus'='#ffd3b6','IniTerm'='#ffaaa5',
-                                       'Universal'='#11999e','Tcyto'='#e0f9b5',
-                                       'PCTL'='#ffc7c7','Th'='#a6d0e4',
-                                       'ExhrTH'='#c06c84','Teff'='#9896f1'),
-                         title.name = paste0(names(object.list)[3],' - ',pw),
-                         legend.pos.x = 5)
-  )
-  dev.off()
-})
-
-
