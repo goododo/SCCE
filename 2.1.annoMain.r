@@ -103,7 +103,7 @@ DimPlot(scce, reduction = "tsne", label = TRUE,
         group.by = c( "mainType",'seurat_clusters','Sample'))
 dev.off()
 
-## delete not good markers (common) ====
+## delete no exp markers (common) ====
 allMarkers <- list(
   EpithelialCells = c('KRT18','EPCAM','KRT19','KRT5','KRT15','CD24','CLDN4','MUC1',
                       'KRT8','KRT7'),
