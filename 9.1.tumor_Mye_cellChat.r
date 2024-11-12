@@ -1,9 +1,9 @@
 rm(list = ls());gc()
 
-if(!dir.exists('C:/Users/10784/Desktop/SCCE/9.1.tumor_Mye_cellChat')){
-  dir.create('C:/Users/10784/Desktop/SCCE/9.1.tumor_Mye_cellChat',recursive = T)}
+if(!dir.exists('SCCE/9.1.tumor_Mye_cellChat')){
+  dir.create('SCCE/9.1.tumor_Mye_cellChat',recursive = T)}
 
-setwd('C:/Users/10784/Desktop/SCCE/9.1.tumor_Mye_cellChat')
+setwd('SCCE/9.1.tumor_Mye_cellChat')
 # library packages ====
 library(dplyr)
 library(Seurat)
@@ -588,23 +588,3 @@ netVisual_bubble(object.list[[2]],
                  grid.on = F,
                  angle.x = 45, remove.isolate = T, return.data = F)
 dev.off()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
