@@ -1,10 +1,10 @@
 #esophageal small-cell carcinoma
 rm(list = ls());gc()
 
-if(!dir.exists('C:/Users/10784/Desktop/SCCE/1.integrate')){
-  dir.create('C:/Users/10784/Desktop/SCCE/1.integrate',recursive = T)}
+if(!dir.exists('SCCE/1.integrate')){
+  dir.create('SCCE/1.integrate',recursive = T)}
 
-setwd('C:/Users/10784/Desktop/SCCE/1.integrate')
+setwd('SCCE/1.integrate')
 # library ====
 library(dplyr)
 library(Seurat)
@@ -33,10 +33,6 @@ ElbowPlot(SCCE) # 20
 dev.off()
 
 SCCE <- RunUMAP(SCCE, reduction = "pca", dims = 1:20)
-
-# Harmony 去批次 (seurat整合已经去批次了) ====
-#library(harmony)
-#SCCE <- SCCE %>% RunHarmony("Sample", plot_convergence = TRUE)
 
 # Cluster ====
 SCCE <- FindNeighbors(SCCE,#reduction = "harmony",
