@@ -1,9 +1,9 @@
 rm(list = ls());gc()
 
-if(!dir.exists('C:/Users/10784/Desktop/SCCE/5.2.featurePlot')){
-  dir.create('C:/Users/10784/Desktop/SCCE/5.2.featurePlot',recursive = T)}
+if(!dir.exists('SCCE/5.2.featurePlot')){
+  dir.create('SCCE/5.2.featurePlot',recursive = T)}
 
-setwd('C:/Users/10784/Desktop/SCCE/5.2.featurePlot')
+setwd('SCCE/5.2.featurePlot')
 # library packages ====
 library(dplyr)
 library(Seurat)
