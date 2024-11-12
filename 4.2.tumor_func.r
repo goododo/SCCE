@@ -1,9 +1,9 @@
 rm(list = ls());gc()
 
-if(!dir.exists('C:\\Users\\10784\\Desktop\\SCCE\\4.2.tumor_func')){
-  dir.create('C:\\Users\\10784\\Desktop\\SCCE\\4.2.tumor_func',recursive = T)}
+if(!dir.exists('SCCE\\4.2.tumor_func')){
+  dir.create('SCCE\\4.2.tumor_func',recursive = T)}
 
-setwd('C:\\Users\\10784\\Desktop\\SCCE\\4.2.tumor_func')
+setwd('SCCE\\4.2.tumor_func')
 # library packages ====
 library(dplyr)
 library(Seurat)
