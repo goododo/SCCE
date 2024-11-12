@@ -1,9 +1,9 @@
 rm(list = ls());gc()
 
-if(!dir.exists('/home/gzy/SCCE/3.2.epi_inferCNV')){
-  dir.create('/home/gzy/SCCE/3.2.epi_inferCNV',recursive = T)}
+if(!dir.exists('SCCE/3.2.epi_inferCNV')){
+  dir.create('SCCE/3.2.epi_inferCNV',recursive = T)}
 
-setwd('/home/gzy/SCCE/3.2.epi_inferCNV')
+setwd('SCCE/3.2.epi_inferCNV')
 # library packages ====
 library(dplyr)
 library(Seurat)
