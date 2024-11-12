@@ -1,9 +1,9 @@
 rm(list = ls());gc()
 
-if(!dir.exists('C:/Users/10784/Desktop/SCCE/10.1.keyGenes_featurePlot')){
-  dir.create('C:/Users/10784/Desktop/SCCE/10.1.keyGenes_featurePlot',recursive = T)}
+if(!dir.exists('SCCE/10.1.keyGenes_featurePlot')){
+  dir.create('SCCE/10.1.keyGenes_featurePlot',recursive = T)}
 
-setwd('C:/Users/10784/Desktop/SCCE/10.1.keyGenes_featurePlot')
+setwd('SCCE/10.1.keyGenes_featurePlot')
 # library packages ====
 keyG <- c("MIF", "ACKR3", "CD74", "CXCR4", "CD44", "MDK", "SDC1",
           "SDC4", "PTPRZ1", "NCL", "ITGA6", "ITGB1", "FN1", "ITGA4",
@@ -101,10 +101,10 @@ VlnPlot(myeloid,keyG, pt.size = 0,group.by = 'MyeloidType')
 dev.off()
 
 # GSEA ====
-if(!dir.exists('C:/Users/10784/Desktop/SCCE/10.2.keyGenes_GSEA')){
-  dir.create('C:/Users/10784/Desktop/SCCE/10.2.keyGenes_GSEA',recursive = T)}
+if(!dir.exists('SCCE/10.2.keyGenes_GSEA')){
+  dir.create('SCCE/10.2.keyGenes_GSEA',recursive = T)}
 
-setwd('C:/Users/10784/Desktop/SCCE/10.2.keyGenes_GSEA')
+setwd('SCCE/10.2.keyGenes_GSEA')
 
 # 加载包
 library(clusterProfiler)
